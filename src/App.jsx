@@ -9,6 +9,7 @@ const ARTICLES = [
     date: "July 2026",
     summary: "An inside look at how decentralized webhook logic and autonomous LLM agents are allowing single operators to out-execute 50-person corporations.",
     image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Placeholder video showcase
     content: `
       <p class="text-lg text-purple-200 font-medium mb-6">At 3:14 AM on a Tuesday, while traditional corporate offices sat pitch black and empty, a silent background server in Lagos processed its 100,000th automated transaction. No managers were awake. No customer support queues were jammed. Just pure, unadulterated autonomous logic.</p>
 
@@ -31,6 +32,36 @@ const ARTICLES = [
     `
   },
   {
+    id: 4,
+    title: "The Physics of Ground-Sensing Radar: Building Drowsy-Driver Safety Systems",
+    category: "Automotive Engineering",
+    readTime: "10 min read",
+    date: "July 2026",
+    summary: "An exhaustive engineering breakdown of micro-radar sensor placement, signal reflection mathematics, and real-time cabin safety automation.",
+    image: "https://images.unsplash.com/photo-1508974239320-0a029497e820?auto=format&fit=crop&w=1200&q=80",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    content: `
+      <p class="text-lg text-purple-200 font-medium mb-6">When designing physical safety systems for modern vehicle chassis, relying solely on visual camera feeds introduces catastrophic blind spots during heavy fog, dust, or night operations. True automotive resilience demands multi-spectrum ground-sensing telemetry.</p>
+
+      <h2 class="text-2xl font-bold text-white mt-8 mb-4">Sensor Placement & Chassis Integration Mechanics</h2>
+      <p class="text-slate-300 mb-4">For students and hardware builders designing safety prototypes, positioning micro-radar units requires accounting for vibrational damping, structural chassis interference, and localized thermal dissipation.</p>
+      
+      <div class="my-8 p-6 bg-gradient-to-r from-purple-950/80 to-slate-900 rounded-2xl border border-purple-500/40 shadow-xl">
+        <h4 class="font-extrabold text-purple-300 text-lg mb-2">📐 Project Formula & Specification Note</h4>
+        <p class="text-slate-300 text-sm leading-relaxed">Signal propagation velocity through varying cabin densities follows strict reflection intervals. Calibrating your interrupt handlers to filter out high-frequency mechanical engine rumble prevents false-positive emergency triggers.</p>
+      </div>
+
+      <h3 class="text-xl font-semibold text-white mt-8 mb-3">Automating the Response Loop</h3>
+      <p class="text-slate-300 mb-4">Once micro-radar sensors detect micro-drifts in vehicle positioning or erratic steering velocity, the system must trigger an immediate audio-haptic feedback loop within 150 milliseconds to successfully alert a fatigued operator.</p>
+
+      <div class="my-10 p-8 bg-slate-900/90 rounded-2xl border border-purple-500/50 text-center shadow-2xl">
+        <h4 class="font-black text-white text-xl mb-3">Scale Your Engineering Workflows</h4>
+        <p class="text-sm text-slate-400 mb-6 max-w-lg mx-auto">Connect your hardware telemetry scripts directly to automated cloud alert workflows.</p>
+        <a href="https://www.make.com/en/register?pc=agenticblog" target="_blank" rel="noopener noreferrer" class="inline-block bg-purple-600 hover:bg-purple-500 text-white px-8 py-3.5 rounded-xl font-bold transition-all shadow-lg shadow-purple-600/40 text-base">Deploy Automation Pipeline Free →</a>
+      </div>
+    `
+  },
+  {
     id: 2,
     title: "Silicon Valley's Worst Kept Secret: Why LLMs Are Rebuilding Entire Supply Chains",
     category: "Industry Deep-Dive",
@@ -38,20 +69,12 @@ const ARTICLES = [
     date: "July 2026",
     summary: "How predictive neural networks and automated sensor telemetry are rewriting the rules of global shipping, logistics, and hardware deployment.",
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    videoUrl: "",
     content: `
       <p class="text-lg text-purple-200 font-medium mb-6">Physical infrastructure is finally talking back. For years, automated hardware systems operated on brittle, hardcoded scripts that shattered the moment a single sensor encountered real-world interference.</p>
 
       <h2 class="text-2xl font-bold text-white mt-8 mb-4">Bridging Edge Hardware and Cloud Neural Nets</h2>
       <p class="text-slate-300 mb-4">By pairing micro-controller telemetry directly with cloud execution pipelines, modern engineers are crafting adaptive closed-loop systems. When physical friction or electrical noise occurs, the system doesn't crash—it adapts its operating parameters on the fly.</p>
-
-      <h3 class="text-xl font-semibold text-white mt-8 mb-3">The Real-Time Fault Recovery Standard</h3>
-      <p class="text-slate-300 mb-4">Sub-second recovery isn't just a luxury anymore; it's the baseline expectation for high-performance automation frameworks operating at scale.</p>
-
-      <div class="my-10 p-8 bg-slate-900/90 rounded-2xl border border-purple-500/50 text-center shadow-2xl">
-        <h4 class="font-black text-white text-xl mb-3">Connect Your Physical Data Streams</h4>
-        <p class="text-sm text-slate-400 mb-6 max-w-lg mx-auto">Scale your physical and digital workflows instantly with enterprise visual builders.</p>
-        <a href="https://www.make.com/en/register?pc=agenticblog" target="_blank" rel="noopener noreferrer" class="inline-block bg-purple-600 hover:bg-purple-500 text-white px-8 py-3.5 rounded-xl font-bold transition-all shadow-lg shadow-purple-600/40 text-base">Start Building Free on Make →</a>
-      </div>
     `
   },
   {
@@ -62,14 +85,12 @@ const ARTICLES = [
     date: "June 2026",
     summary: "Stop treating AI like a search engine. Here is the exact multi-stage conditioning method used to force models to write flawless production architectures.",
     image: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=1200&q=80",
+    videoUrl: "",
     content: `
       <p class="text-lg text-purple-200 font-medium mb-6">If you ask an AI a generic question, you get a generic, useless answer. That is the amateur trap. Elite system architects don't chat with models—they chain them into strict, adversarial verification loops.</p>
 
       <h2 class="text-2xl font-bold text-white mt-8 mb-4">The Multi-Stage Specification Protocol</h2>
       <p class="text-slate-300 mb-4">By breaking complex code generation tasks into isolated micro-prompts where one model drafts, a second model audits for security flaws, and a third compiles execution tests, you achieve near-zero hallucination rates.</p>
-
-      <h3 class="text-xl font-semibold text-white mt-8 mb-3">Automating the Feedback Loop</h3>
-      <p class="text-slate-300 mb-4">When integrated into automated webhook sequences, this chaining method allows your systems to write, test, and patch their own codebases while you focus entirely on high-level strategy.</p>
     `
   }
 ];
@@ -121,13 +142,13 @@ export default function App() {
             {/* Hero Section */}
             <div className="text-center max-w-4xl mx-auto mb-16">
               <span className="inline-block text-xs font-extrabold uppercase tracking-widest text-purple-300 bg-purple-950/90 border border-purple-500/40 px-4 py-1.5 rounded-full mb-6 shadow-inner">
-                🔥 Investigating the Frontier of Autonomous Systems
+                🔥 Investigating the Frontier of Autonomous Systems & Projects
               </span>
               <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-6 leading-tight">
                 Where Elite Engineering Meets <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 bg-clip-text text-transparent">Viral AI Truths</span>
               </h1>
               <p className="text-slate-300 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
-                Deep investigative stories, behind-the-scenes system architectures, and underground automation blueprints for high-impact builders.
+                Deep investigative stories, hardware project blueprints, and underground automation frameworks for high-impact builders and students.
               </p>
             </div>
 
@@ -173,12 +194,12 @@ export default function App() {
               ))}
             </div>
 
-            {/* Newsletter Subscription Box to Drive Viral Retention */}
+            {/* Newsletter Subscription Box */}
             <div className="max-w-2xl mx-auto bg-gradient-to-br from-purple-950/80 via-slate-900 to-indigo-950/80 border border-purple-500/40 rounded-3xl p-8 md:p-12 text-center shadow-2xl mb-12">
               <div className="text-3xl mb-3">🛡️</div>
               <h3 className="text-2xl font-black text-white mb-3">Never Miss a Classified Blueprint</h3>
               <p className="text-slate-300 text-sm md:text-base mb-6 leading-relaxed">
-                Join thousands of builders receiving our weekly deep-dive reports on autonomous systems, prompt engineering, and solo scaling.
+                Join thousands of builders receiving our weekly deep-dive reports on autonomous systems, project data, and solo scaling.
               </p>
               {!emailSubscribed ? (
                 <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -234,6 +255,22 @@ export default function App() {
                   className="w-full h-full object-cover"
                 />
               </div>
+
+              {/* Embedded Video Feature Section */}
+              {selectedArticle.videoUrl && (
+                <div className="mb-10">
+                  <h3 className="text-lg font-bold text-purple-300 mb-3">📺 Multimedia Video Breakdown</h3>
+                  <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-slate-800 shadow-2xl bg-black">
+                    <iframe 
+                      src={selectedArticle.videoUrl} 
+                      title="Article Video Breakdown"
+                      className="absolute top-0 left-0 w-full h-full border-0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                </div>
+              )}
 
               <div 
                 className="text-slate-300 leading-relaxed space-y-6 text-base md:text-lg"
