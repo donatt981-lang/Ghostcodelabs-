@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 const ARTICLES = [
   {
-      {
     id: 4,
     title: "Vector Databases Exposed: The Underground Engine Powering Modern AI Memory",
     category: "Data Architecture",
@@ -25,7 +24,7 @@ const ARTICLES = [
       </div>
 
       <h3 class="text-xl font-semibold text-white mt-8 mb-3">Architecting Fault-Tolerant Retrieval Loops</h3>
-      <p class="text-slate-300 mb-4">When designing production pipelines, your database indexing parameters must match your hardware memory constraints. Setting an overly dense construction parameter ($M$) on your index graph will exhaust RAM under heavy multi-user concurrent loads.</p>
+      <p class="text-slate-300 mb-4">When designing production pipelines, your database indexing parameters must match your hardware memory constraints. Setting an overly dense construction parameter on your index graph will exhaust RAM under heavy multi-user concurrent loads.</p>
 
       <div class="my-10 p-8 bg-slate-900/90 rounded-2xl border border-emerald-500/50 text-center shadow-2xl">
         <h4 class="font-black text-white text-xl mb-3">Automate Your Data Infrastructure</h4>
@@ -78,8 +77,8 @@ const ARTICLES = [
       <h3 class="text-xl font-semibold text-white mt-8 mb-3">Automating Circuit Breakers</h3>
       <p class="text-slate-300 mb-4">No algorithmic script should run unsupervised without automated safety tripwires. Hardcoding real-time drawdown thresholds that automatically sever execution threads protects your capital when unexpected anomaly spikes occur in the telemetry feed.</p>
     `
-  }
-
+  },
+  {
     id: 1,
     title: "Building Autonomous Agent Loops: How to Make LLMs Execute Tasks While You Sleep",
     category: "AI & Automation",
@@ -87,7 +86,7 @@ const ARTICLES = [
     date: "July 2026",
     summary: "Stop treating AI like a static chat box. Here is the exact architectural blueprint for chaining language models into self-correcting execution loops.",
     image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
-    videoUrl: "https://www.youtube.com/embed/zjkBMFhNj_g", // Educational AI engineering breakdown
+    videoUrl: "https://www.youtube.com/embed/zjkBMFhNj_g",
     content: `
       <p class="text-lg text-emerald-300 font-medium mb-6">Most people use artificial intelligence like a glorified search engine—type a prompt, read the text, close the tab. But underground builders and systems engineers are using multi-stage agent loops to automate entire digital workflows from end to end.</p>
 
@@ -114,7 +113,7 @@ const ARTICLES = [
     date: "July 2026",
     summary: "An engineering deep-dive into deploying compressed computer vision models directly onto micro-silicon hardware nodes.",
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-    videoUrl: "https://www.youtube.com/embed/7EhRkOXpby0", // Educational systems engineering breakdown
+    videoUrl: "https://www.youtube.com/embed/7EhRkOXpby0",
     content: `
       <p class="text-lg text-emerald-300 font-medium mb-6">Relying on cloud server round-trips for real-time sensor data introduces fatal latency spikes. When handling high-frequency telemetry, intelligence must live directly on the physical hardware.</p>
 
@@ -130,7 +129,7 @@ const ARTICLES = [
     date: "July 2026",
     summary: "How to eliminate hallucinations by setting up adversarial verification steps between multiple model instances.",
     image: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=1200&q=80",
-    videoUrl: "https://www.youtube.com/embed/SqcY0GlETPk", // Educational coding architecture tutorial
+    videoUrl: "https://www.youtube.com/embed/SqcY0GlETPk",
     content: `
       <p class="text-lg text-emerald-300 font-medium mb-6">Generic prompts yield generic code. If you want production-ready architecture, you have to force models through strict adversarial code-review pipelines.</p>
 
