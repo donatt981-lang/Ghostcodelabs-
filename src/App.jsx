@@ -1,100 +1,66 @@
 import React, { useState } from 'react';
-import { Sparkles, Terminal, Zap, ArrowRight, BookOpen, DollarSign, CheckCircle2 } from 'lucide-react';
 
 const ARTICLES = [
   {
     id: 1,
-    title: "Building Autonomous Workflows with Make.com & Claude 3.5",
+    title: "Building Autonomous Workflows with LLMs & Make.com",
     category: "AI Automation",
     readTime: "5 min read",
     date: "Jul 2026",
-    summary: "How to connect LLMs directly to your business apps to automate customer support, lead generation, and content pipelines without writing complex backend code.",
+    summary: "How to connect modern LLMs directly to Make.com to automate content generation, customer support, and business workflows without writing backend code.",
     content: `
       <h2>The Shift to Agentic Workflows</h2>
-      <p>Traditional automation involved simple linear triggers: <em>If A happens, do B</em>. But with advanced AI models like Claude 3.5 and GPT-4o, we can build dynamic, decision-making workflows that operate autonomously.</p>
+      <p>Traditional automation involved simple linear triggers: <em>"When an email arrives, save the attachment to Google Drive."</em> Today, AI agents allow us to introduce decision-making loops into our business processes.</p>
       
       <h3>Why Make.com is the Ultimate Engine</h3>
-      <p>While custom code gives you control, maintaining servers and API endpoints for simple integrations is a hassle. <strong>Make.com</strong> provides a visual Canvas that allows you to connect hundreds of apps with zero infrastructure management.</p>
+      <p>While custom code gives you control, Make.com provides a visual builder that dramatically speeds up development while remaining flexible enough to handle complex API calls.</p>
 
-      <div className="my-6 p-4 bg-purple-900/30 border border-purple-500/30 rounded-xl">
-        <h4 className="font-bold text-purple-300 mb-2">🚀 Ready to build your first AI agent?</h4>
-        <p className="text-sm text-gray-300 mb-3">Get started with 10,000 free operations and 1 month free on the Core Plan using our official partner link below:</p>
-        <a 
-          href="https://www.make.com/en/register?pc=agenticblog" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-4 py-2 rounded-lg transition-colors text-sm"
-        >
-          Claim Your Free Make.com Plan <ArrowRight className="w-4 h-4" />
-        </a>
+      <div style="margin: 1.5rem 0; padding: 1rem; background-color: rgba(147, 51, 234, 0.2); border-radius: 0.5rem; border: 1px solid rgba(168, 85, 247, 0.4);">
+        <h4 style="font-weight: bold; color: #d8b4fe; margin-bottom: 0.5rem;">🚀 Ready to build your own AI automation?</h4>
+        <p style="font-size: 0.875rem; color: #cbd5e1; margin-bottom: 0.75rem;">Get started for free on Make.com and build your first autonomous workflow today.</p>
+        <a href="https://www.make.com/en/register?pc=agenticblog" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #9333ea; color: white; padding: 0.5rem 1rem; border-radius: 0.375rem; font-weight: 600; text-decoration: none;">Claim Your Free Make.com Plan →</a>
       </div>
 
-      <h3>Key Components of an Agentic Pipeline</h3>
-      <ul>
-        <li><strong>Trigger:</strong> Inbound email, webhook, or scheduled database query.</li>
-        <li><strong>Reasoning Layer:</strong> Passing structured prompts to an LLM to evaluate intent.</li>
-        <li><strong>Execution:</strong> Routing outputs directly to CRMs, databases, or notification channels.</li>
-      </ul>
+      <p>By connecting custom webhooks directly to OpenAI or Gemini endpoints inside Make, you can parse raw data, format outputs, and post directly to CMS platforms automatically.</p>
     `
   },
   {
     id: 2,
-    title: "How to Monetize AI Tools via High-Ticket Affiliate Marketing",
-    category: "Monetization",
+    title: "The Solopreneur AI Stack for 2026",
+    category: "Solopreneurship",
     readTime: "7 min read",
     date: "Jul 2026",
-    summary: "A practical guide on how creators and engineers are generating recurring revenue by teaching automation systems built on top of top-tier SaaS platforms.",
+    summary: "A curated list of no-code tools and AI models that allow a single founder to operate with the efficiency of a 10-person team.",
     content: `
-      <h2>The SaaS Affiliate Boom</h2>
-      <p>Software platforms pay hefty recurring commissions to creators who show users how to solve real problems. Instead of pushing low-margin products, building tutorials around essential automation platforms like <strong>Make.com</strong> yields compounding passive income.</p>
+      <h2>Leveraging AI as a Force Multiplier</h2>
+      <p>Running a digital business solo used to mean spending 80% of your time on operational overhead. With modern automation pipelines, that dynamic is flipped.</p>
 
-      <h3>Step-by-Step Monetization Blueprint</h3>
-      <ol>
-        <li><strong>Identify Pain Points:</strong> Find repetitive workflows in marketing, software dev, or operations.</li>
-        <li><strong>Build a Blueprint:</strong> Design a working scenario in Make.com that solves the issue automatically.</li>
-        <li><strong>Publish & Educate:</strong> Write detailed breakdowns or record video walk-throughs highlighting your affiliate link.</li>
-      </ol>
+      <h3>Core Infrastructure</h3>
+      <ul>
+        <li><strong>Content Pipeline:</strong> Gemini API + Custom Prompt Templates</li>
+        <li><strong>Workflow Orchestration:</strong> Make.com</li>
+        <li><strong>Frontend Hosting:</strong> Vercel</li>
+      </ul>
 
-      <div className="my-6 p-4 bg-purple-900/30 border border-purple-500/30 rounded-xl">
-        <h4 className="font-bold text-purple-300 mb-2">💡 Start Earning Recurrent Commissions</h4>
-        <p className="text-sm text-gray-300 mb-3">Sign up for Make.com to build your own shareable templates and earn 35% recurring revenue on all referrals:</p>
-        <a 
-          href="https://www.make.com/en/register?pc=agenticblog" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-4 py-2 rounded-lg transition-colors text-sm"
-        >
-          Create Your Make Account Now <ArrowRight className="w-4 h-4" />
-        </a>
+      <div style="margin: 1.5rem 0; padding: 1rem; background-color: rgba(147, 51, 234, 0.2); border-radius: 0.5rem; border: 1px solid rgba(168, 85, 247, 0.4);">
+        <h4 style="font-weight: bold; color: #d8b4fe; margin-bottom: 0.5rem;">⚡ Automate Your Solopreneur Stack</h4>
+        <p style="font-size: 0.875rem; color: #cbd5e1; margin-bottom: 0.75rem;">Connect your favorite apps and put your business on autopilot with Make.</p>
+        <a href="https://www.make.com/en/register?pc=agenticblog" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #9333ea; color: white; padding: 0.5rem 1rem; border-radius: 0.375rem; font-weight: 600; text-decoration: none;">Try Make for Free →</a>
       </div>
     `
   },
   {
     id: 3,
-    title: "The $500/Day AI Pipeline: Fully Automated Content Distro",
-    category: "Blueprints",
-    readTime: "6 min read",
-    date: "Jul 2026",
-    summary: "Discover how top creators automate their entire multi-channel distribution setup using a single Make.com scenario connected to OpenAI and social APIs.",
+    title: "Prompt Engineering Formulas for Technical Writing",
+    category: "Prompting",
+    readTime: "4 min read",
+    date: "Jun 2026",
+    summary: "Master structured prompt patterns like RTF (Role, Task, Format) to produce clean, publish-ready documentation and blog posts.",
     content: `
-      <h2>Why Manual Content Posting is Dead</h2>
-      <p>Creating content takes enough energy—manually reformatting, scheduling, and publishing to 5 different platforms is a waste of creative horsepower. By building a unified pipeline, you can turn a single article or video into a dozen tailor-made posts across Twitter, LinkedIn, Telegram, and WordPress.</p>
-
-      <h3>The Architecture</h3>
-      <p>By connecting your primary RSS feed or CMS into <strong>Make.com</strong>, every new publish event triggers an AI summarizer module that crafts unique captions tailored to each platform's culture and format requirements.</p>
-
-      <div className="my-6 p-4 bg-purple-900/30 border border-purple-500/30 rounded-xl">
-        <h4 className="font-bold text-purple-300 mb-2">⚡ Build This Exact Pipeline Free</h4>
-        <p className="text-sm text-gray-300 mb-3">Set up your free Make.com environment today to import automation blueprints directly:</p>
-        <a 
-          href="https://www.make.com/en/register?pc=agenticblog" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-4 py-2 rounded-lg transition-colors text-sm"
-        >
-          Get Started on Make.com <ArrowRight className="w-4 h-4" />
-        </a>
-      </div>
+      <h2>The RTF Prompting Framework</h2>
+      <p>To get high-quality outputs consistently, structure your prompts into clear sections rather than asking open-ended questions.</p>
+      
+      <p>When generating automated tutorials, feed the AI a strict JSON schema or HTML structure to ensure seamless integration into your web application.</p>
     `
   }
 ];
@@ -103,104 +69,88 @@ export default function App() {
   const [selectedArticle, setSelectedArticle] = useState(null);
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans antialiased">
+    <div style="min-height: 100vh; background-color: #020617; color: #f8fafc; font-family: system-ui, -apple-system, sans-serif;">
       {/* Header */}
-      <header className="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
-        <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2 cursor-pointer" onClick={() => setSelectedArticle(null)}>
-            <div className="p-2 bg-purple-600/20 rounded-lg border border-purple-500/30">
-              <Sparkles className="w-6 h-6 text-purple-400" />
-            </div>
-            <span className="font-bold text-xl tracking-tight bg-gradient-to-r from-purple-400 to-indigo-300 bg-clip-text text-transparent">
-              Agentic Blog
-            </span>
+      <header style="border-bottom: 1px solid #1e293b; background-color: rgba(15, 23, 42, 0.8); backdrop-filter: blur(8px); position: sticky; top: 0; z-index: 50;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; font-weight: bold; font-size: 1.25rem;">
+            <span style="color: #a855f7;">✨ Agentic</span>
+            <span>Blog</span>
           </div>
-          <a
-            href="https://www.make.com/en/register?pc=agenticblog"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden sm:flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-4 py-2 rounded-lg transition-all text-sm shadow-lg shadow-purple-900/20"
+          <a 
+            href="https://www.make.com/en/register?pc=agenticblog" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            style="background-color: #9333ea; color: white; padding: 0.5rem 1rem; border-radius: 0.5rem; font-size: 0.875rem; font-weight: 600; text-decoration: none;"
           >
-            <Zap className="w-4 h-4" /> Try Make Free
+            Try Make Free
           </a>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="max-w-5xl mx-auto px-4 py-12">
-        {selectedArticle ? (
-          <article className="max-w-3xl mx-auto">
-            <button
-              onClick={() => setSelectedArticle(null)}
-              className="text-purple-400 hover:text-purple-300 text-sm mb-6 flex items-center gap-1 transition-colors"
-            >
-              ← Back to all articles
-            </button>
-            <div className="flex items-center gap-3 text-sm text-slate-400 mb-3">
-              <span className="bg-purple-500/10 text-purple-400 px-3 py-1 rounded-full border border-purple-500/20">
-                {selectedArticle.category}
-              </span>
-              <span>•</span>
-              <span>{selectedArticle.readTime}</span>
-              <span>•</span>
-              <span>{selectedArticle.date}</span>
-            </div>
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-6 leading-tight">
-              {selectedArticle.title}
-            </h1>
-            <div
-              className="prose prose-invert max-w-none text-slate-300 space-y-4 text-base sm:text-lg leading-relaxed"
-              dangerouslySetInnerHTML={{ __html: selectedArticle.content }}
-            />
-          </article>
-        ) : (
+      <main style="max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem;">
+        {!selectedArticle ? (
           <div>
-            {/* Hero */}
-            <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
-              <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
-                Autonomous Workflows & AI Systems
+            <div style="text-align: center; margin-bottom: 3rem;">
+              <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem;">
+                Autonomous Systems & <span style="color: #c084fc;">AI Automation</span>
               </h1>
-              <p className="text-slate-400 text-lg">
-                Practical engineering breakdowns on leveraging AI agents, automated pipelines, and SaaS monetization.
+              <p style="color: #94a3b8; max-width: 600px; margin: 0 auto;">
+                Blueprints, workflows, and insights for building intelligent applications and automated systems.
               </p>
             </div>
 
-            {/* Grid */}
-            <div className="grid md:grid-cols-3 gap-6">
-              {ARTICLES.map((art) => (
-                <div
-                  key={art.id}
-                  onClick={() => setSelectedArticle(art)}
-                  className="bg-slate-900/60 border border-slate-800 hover:border-purple-500/50 rounded-2xl p-6 cursor-pointer transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-purple-900/10 flex flex-col justify-between"
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+              {ARTICLES.map((article) => (
+                <div 
+                  key={article.id}
+                  onClick={() => setSelectedArticle(article)}
+                  style="background-color: #0f172a; border: 1px solid #1e293b; border-radius: 0.75rem; padding: 1.5rem; cursor: pointer; transition: all 0.2s;"
                 >
-                  <div>
-                    <div className="flex items-center justify-between text-xs text-slate-400 mb-3">
-                      <span className="text-purple-400 font-semibold">{art.category}</span>
-                      <span>{art.readTime}</span>
-                    </div>
-                    <h2 className="text-xl font-bold text-white mb-3 hover:text-purple-300 transition-colors">
-                      {art.title}
-                    </h2>
-                    <p className="text-slate-400 text-sm line-clamp-3 mb-6">
-                      {art.summary}
-                    </p>
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                    <span style="font-size: 0.75rem; font-weight: 600; color: #c084fc; background-color: rgba(168, 85, 247, 0.1); padding: 0.25rem 0.5rem; border-radius: 0.25rem;">
+                      {article.category}
+                    </span>
+                    <span style="font-size: 0.75rem; color: #64748b;">{article.readTime}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-purple-400 font-semibold text-sm">
-                    Read article <ArrowRight className="w-4 h-4" />
+                  <h2 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">{article.title}</h2>
+                  <p style="color: #94a3b8; font-size: 0.875rem; line-height: 1.5; margin-bottom: 1rem;">{article.summary}</p>
+                  <div style="color: #a855f7; font-size: 0.875rem; font-weight: 600; display: flex; align-items: center; gap: 0.25rem;">
+                    Read Article →
                   </div>
                 </div>
               ))}
             </div>
           </div>
+        ) : (
+          <div style="max-width: 800px; margin: 0 auto;">
+            <button 
+              onClick={() => setSelectedArticle(null)}
+              style="background: none; border: none; color: #a855f7; font-weight: 600; cursor: pointer; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;"
+            >
+              ← Back to articles
+            </button>
+
+            <article>
+              <div style="margin-bottom: 2rem;">
+                <span style="font-size: 0.875rem; font-weight: 600; color: #c084fc; background-color: rgba(168, 85, 247, 0.1); padding: 0.25rem 0.75rem; border-radius: 0.25rem;">
+                  {selectedArticle.category}
+                </span>
+                <h1 style="font-size: 2.25rem; font-weight: 800; margin-top: 0.75rem; margin-bottom: 0.5rem;">
+                  {selectedArticle.title}
+                </h1>
+                <p style="color: #64748b; font-size: 0.875rem;">Published {selectedArticle.date} • {selectedArticle.readTime}</p>
+              </div>
+
+              <div 
+                style="color: #cbd5e1; line-height: 1.75;"
+                dangerouslySetInnerHTML={{ __html: selectedArticle.content }}
+              />
+            </article>
+          </div>
         )}
       </main>
-
-      {/* Footer */}
-      <footer className="border-t border-slate-800 bg-slate-900/30 py-8 mt-20">
-        <div className="max-w-5xl mx-auto px-4 text-center text-slate-500 text-sm">
-          © 2026 Agentic Blog. Built with React & Vercel.
-        </div>
-      </footer>
     </div>
   );
 }
