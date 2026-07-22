@@ -2,6 +2,92 @@ import React, { useState } from 'react';
 
 const ARTICLES = [
   {
+    id: 7,
+    title: "Beyond the Black Box: Demystifying AI-Driven Driver Monitoring Systems (DMS) in 2026",
+    category: "Automotive Safety & AI",
+    readTime: "10 min read",
+    date: "July 2026",
+    summary: "An engineering deep-dive into sub-50ms computer vision pipelines, gaze vectoring, and neural edge inference built to comply with global Driver Drowsiness and Attention Warning (DDAW) mandates.",
+    image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1200&q=80",
+    videoUrl: "https://www.youtube.com/embed/JE99gacIDd8",
+    content: `
+      <p class="text-lg text-emerald-300 font-medium mb-6">Driver Drowsiness and Attention Warning (DDAW) systems are no longer optional features—global vehicle regulations are mandating continuous, active monitoring. However, relying on cloud processing creates dangerous latency lags, making real-time edge inference on local NPU hardware essential.</p>
+
+      <h2 class="text-2xl font-bold text-white mt-8 mb-4">Sub-50ms Computer Vision Pipelines</h2>
+      <p class="text-slate-300 mb-4">Modern cabin telemetry utilizes near-infrared (NIR) illuminated sensors paired with quantized Convolutional Neural Networks (CNNs). Operating at frame rates above 60 FPS, the vision pipeline continually evaluates three critical biometrics:</p>
+      
+      <ul class="list-disc list-inside text-slate-300 space-y-2 mb-6">
+        <li><strong class="text-white">PERCLOS (Percentage of Eye Closure):</strong> Calculating the duration ratio where pupils are 80% to 100% covered over rolling time windows.</li>
+        <li><strong class="text-white">Gaze Vectoring:</strong> Mapping multi-axis ocular trajectory against forward telemetry to detect driver distraction.</li>
+        <li><strong class="text-white">Head-Pose Kinematics:</strong> Tracking pitch, roll, and neck drops indicative of early microsleep onset.</li>
+      </ul>
+
+      <div class="my-8 p-6 bg-slate-900 rounded-2xl border border-emerald-500/40 shadow-xl">
+        <h4 class="font-extrabold text-emerald-400 text-lg mb-2">⚡ Edge Hardware Optimization Note</h4>
+        <p class="text-slate-300 text-sm leading-relaxed">Quantizing model weights to INT8 precision allows full facial landmark tracking models to run under 3 watts of power on local automotive NPUs, guaranteeing low-latency response times without overheating cabin electronics.</p>
+      </div>
+
+      <h3 class="text-xl font-semibold text-white mt-8 mb-3">Preventing Alert Fatigue</h3>
+      <p class="text-slate-300 mb-4">A critical failure mode in driver safety systems is false-positive fatigue alerts. Systems must dynamically fuse optical gaze vectors with physical steering torque sensors before triggering audio-haptic warnings to maintain driver trust.</p>
+    `
+  },
+  {
+    id: 8,
+    title: "Reverse Engineering the CAN-Bus: Sniffing Hidden Powertrain Telemetry",
+    category: "Vehicle Bus Systems",
+    readTime: "11 min read",
+    date: "July 2026",
+    summary: "A step-by-step technical teardown on capturing, filtering, and decoding high-speed differential CAN traffic using SocketCAN, custom Python scripts, and OBD-II hardware interfaces.",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    videoUrl: "https://www.youtube.com/embed/fNcJuWDjQUY",
+    content: `
+      <p class="text-lg text-emerald-300 font-medium mb-6">Interfacing custom safety modules, auxiliary sensor arrays, or digital dashboards into factory vehicle architectures requires direct communication with the Controller Area Network (CAN-bus). Because automotive OEMs rarely publish proprietary arbitration IDs, reverse engineering synthetic CAN frames is an essential skill for custom automotive builders.</p>
+
+      <h2 class="text-2xl font-bold text-white mt-8 mb-4">Differential Signal Processing and Framing</h2>
+      <p class="text-slate-300 mb-4">High-speed CAN networks operate at 500 kbps over twisted-pair differential lines (CAN_H and CAN_L). To isolate specific telemetry values like throttle position or wheel speed without flooding the bus:</p>
+
+      <ol class="list-decimal list-inside text-slate-300 space-y-3 mb-6">
+        <li><strong class="text-white">Hardware Pairing:</strong> Connect an isolated CAN transceiver (like an MCP2515 or SocketCAN USB interface) directly into the diagnostic OBD-II bus.</li>
+        <li><strong class="text-white">Bitwise Filtering:</strong> Apply bitwise masks in your code to ignore auxiliary body modules and focus exclusively on high-frequency powertrain IDs.</li>
+        <li><strong class="text-white">Delta State Analysis:</strong> Record baseline logs while static, then actuate physical components (such as depressing the throttle in 10% increments) to isolate byte shifts.</li>
+      </ol>
+
+      <div class="my-8 p-6 bg-slate-900 rounded-2xl border border-emerald-500/40 shadow-xl">
+        <h4 class="font-extrabold text-emerald-400 text-lg mb-2">🛠️ Lab Testing Safety Protocol</h4>
+        <p class="text-slate-300 text-sm leading-relaxed">Always perform frame injection tests in read-only mode first. Writing invalid arbitration frames to an active bus can trigger limp-mode flags or lock ECU memory registers.</p>
+      </div>
+    `
+  },
+  {
+    id: 9,
+    title: "Centralized Zone Architectures: Why Legacy ECUs Are Obsolete",
+    category: "Systems Engineering",
+    readTime: "9 min read",
+    date: "July 2026",
+    summary: "Why traditional distributed vehicle architectures carrying over 100 individual ECUs are being replaced by high-speed deterministic Ethernet backbones and centralized domain compute.",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+    videoUrl: "https://www.youtube.com/embed/Vw6ItojaDe0",
+    content: `
+      <p class="text-lg text-emerald-300 font-medium mb-6">The classical automotive model—where every individual function requires a dedicated Electronic Control Unit (ECU)—has hit a wall. Modern luxury vehicles carry miles of copper wiring harnesses, creating massive weight penalties and manufacturing bottlenecks.</p>
+
+      <h2 class="text-2xl font-bold text-white mt-8 mb-4">The Zone-Based Paradigm Shift</h2>
+      <p class="text-slate-300 mb-4">Software-Defined Vehicles (SDVs) solve this by consolidating processing into centralized compute blocks fed by regional zone controllers:</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+        <div class="p-4 bg-slate-900 border border-slate-800 rounded-xl">
+          <h4 class="text-emerald-400 font-bold mb-1">Zone Controllers</h4>
+          <p class="text-xs text-slate-400">Positioned in the vehicle corners to handle localized I/O, power routing, and sensor aggregation.</p>
+        </div>
+        <div class="p-4 bg-slate-900 border border-slate-800 rounded-xl">
+          <h4 class="text-emerald-400 font-bold mb-1">Central System Compute</h4>
+          <p class="text-xs text-slate-400">High-performance SoC clusters dedicated to heavy workloads like ADAS fusion and autonomous path planning.</p>
+        </div>
+      </div>
+
+      <p class="text-slate-300 mb-4">By deploying Time-Sensitive Networking (TSN) over Automotive Ethernet, developers can push over-the-air (OTA) updates and dynamically reconfigure vehicle hardware modules without changing physical wiring layout.</p>
+    `
+  },
+  {
     id: 4,
     title: "Vector Databases Exposed: The Underground Engine Powering Modern AI Memory",
     category: "Data Architecture",
